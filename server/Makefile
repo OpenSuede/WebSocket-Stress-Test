@@ -4,7 +4,7 @@ INCLUDE_PATH=include
 BIN_PATH=bin
 LOG_PATH=log
 APPLICATION_NAME=quicksocket
-FILES=quicksocket.C http_request.C http_response.C tcp_listener.C websocket_frame.C
+FILES=log.cpp quicksocket.cpp http_request.cpp http_response.cpp tcp_listener.cpp websocket_frame.cpp
 SOURCES = $(FILES:%.cpp=$(SOURCE_PATH)/%.cpp)
 OBJ=$(FILES:%.C=$(BUILD_PATH)/%.o)
 
