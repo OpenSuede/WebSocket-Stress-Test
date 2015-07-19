@@ -1,6 +1,6 @@
 #ifndef HTTP_RESPONSE_H
 #define HTTP_RESPONSE_H
-#include <http_request.h>
+#include <http_request.hpp>
 #include <string>
 using std::string;
 

@@ -2,8 +2,8 @@
 #include <openssl/bio.h>
 #include <openssl/evp.h>
 #include <openssl/buffer.h>
-#include <http_response.h>
-#include <http_request.h>
+#include <http_response.hpp>
+#include <http_request.hpp>
 #include <stdlib.h>
 #include <cstring>
 #include <string>

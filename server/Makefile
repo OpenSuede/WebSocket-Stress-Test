@@ -6,12 +6,12 @@ LOG_PATH=log
 APPLICATION_NAME=quicksocket
 FILES=log.cpp quicksocket.cpp http_request.cpp http_response.cpp tcp_listener.cpp websocket_frame.cpp
 SOURCES = $(FILES:%.cpp=$(SOURCE_PATH)/%.cpp)
-OBJ=$(FILES:%.C=$(BUILD_PATH)/%.o)
+OBJ=$(FILES:%.cpp=$(BUILD_PATH)/%.o)
 
 all: folders $(OBJ)
 	g++ -std=c++11 -o $(BIN_PATH)/$(APPLICATION_NAME) -I./$(INCLUDE_PATH) $(OBJ) -L/usr/lib -lssl -lcrypto -pthread
 
-$(BUILD_PATH)/%.o : $(SOURCE_PATH)/%.C
+$(BUILD_PATH)/%.o : $(SOURCE_PATH)/%.cpp
 	g++ -std=c++11 -o $@ -g -I./$(INCLUDE_PATH) -c $< -L/usr/lib -lssl -lcrypto -pthread
 
 debug: folders $(OBJ)
